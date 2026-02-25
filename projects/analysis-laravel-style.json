@@ -1,0 +1,161 @@
+[
+  {
+    "repo": "cvMaker",
+    "laravel": true,
+    "php": false,
+    "composer": true,
+    "php_version": "^8.2",
+    "laravel_version": "^12.0",
+    "packages": [],
+    "frontend": [
+      "vite",
+      "laravel-vite-plugin",
+      "tailwindcss",
+      "alpinejs",
+      "axios"
+    ],
+    "structure": [
+      "app",
+      "app/Http/Controllers",
+      "routes",
+      "database/migrations",
+      "resources/views",
+      "resources/js",
+      "tests"
+    ],
+    "patterns": [
+      "FormRequest validation: app/Http/Requests/ProfileUpdateRequest.php, app/Http/Requests/Auth/LoginRequest.php",
+      "Service classes: app/Providers/AppServiceProvider.php"
+    ]
+  },
+  {
+    "repo": "dgt_report",
+    "laravel": true,
+    "php": false,
+    "composer": true,
+    "php_version": "^8.2",
+    "laravel_version": "^11.31",
+    "packages": [
+      "spatie/laravel-medialibrary",
+      "livewire/livewire",
+      "laravel/horizon",
+      "spatie/laravel-cookie-consent",
+      "spatie/laravel-google-fonts",
+      "spatie/laravel-honeypot",
+      "spatie/laravel-stripe-webhooks",
+      "spatie/schema-org"
+    ],
+    "frontend": [
+      "vite",
+      "laravel-vite-plugin",
+      "tailwindcss",
+      "alpinejs",
+      "axios"
+    ],
+    "structure": [
+      "app",
+      "app/Http/Controllers",
+      "routes",
+      "database/migrations",
+      "resources/views",
+      "resources/js",
+      "tests"
+    ],
+    "patterns": [
+      "FormRequest validation: app/Http/Requests/ProfileUpdateRequest.php, app/Http/Requests/Auth/LoginRequest.php",
+      "Service classes: app/Providers/AppServiceProvider.php, app/Providers/HorizonServiceProvider.php, app/Providers/GoogleAdsServiceProvider.php",
+      "Jobs/dispatch: app/Livewire/UploadInformation.php, app/Livewire/Admin/DgtReports/View.php, app/Console/Commands/Remarketing.php",
+      "HTTP client: app/Rules/GoogleRecaptcha.php"
+    ]
+  },
+  {
+    "repo": "laravel-remarketing",
+    "laravel": false,
+    "php": false,
+    "composer": true,
+    "php_version": "^8.2",
+    "laravel_version": null,
+    "packages": [
+      "spatie/laravel-package-tools"
+    ],
+    "frontend": [],
+    "structure": [
+      "database/migrations",
+      "resources/views"
+    ],
+    "patterns": []
+  },
+  {
+    "repo": "laravel-support-center",
+    "laravel": false,
+    "php": false,
+    "composer": true,
+    "php_version": "^8.2",
+    "laravel_version": null,
+    "packages": [
+      "spatie/laravel-medialibrary",
+      "livewire/livewire",
+      "spatie/laravel-package-tools"
+    ],
+    "frontend": [],
+    "structure": [
+      "routes",
+      "database/migrations",
+      "resources/views",
+      "tests"
+    ],
+    "patterns": []
+  },
+  {
+    "repo": "notasimple",
+    "laravel": true,
+    "php": false,
+    "composer": true,
+    "php_version": "^8.2",
+    "laravel_version": "^11.31",
+    "packages": [
+      "spatie/laravel-medialibrary",
+      "livewire/livewire",
+      "laravel/horizon",
+      "spatie/laravel-cookie-consent",
+      "spatie/laravel-google-fonts",
+      "spatie/laravel-honeypot",
+      "spatie/laravel-stripe-webhooks",
+      "spatie/schema-org"
+    ],
+    "frontend": [
+      "vite",
+      "laravel-vite-plugin",
+      "tailwindcss",
+      "alpinejs",
+      "axios"
+    ],
+    "structure": [
+      "app",
+      "app/Http/Controllers",
+      "routes",
+      "database/migrations",
+      "resources/views",
+      "resources/js",
+      "tests"
+    ],
+    "patterns": [
+      "FormRequest validation: app/Http/Requests/ProfileUpdateRequest.php, app/Http/Requests/Auth/LoginRequest.php",
+      "Service classes: app/Providers/AppServiceProvider.php, app/Providers/HorizonServiceProvider.php, app/Providers/GoogleAdsServiceProvider.php",
+      "Jobs/dispatch: app/Livewire/UploadInformation.php, app/Livewire/Admin/SimpleNotes/View.php, app/Console/Commands/Remarketing.php",
+      "HTTP client: app/Rules/GoogleRecaptcha.php"
+    ]
+  },
+  {
+    "repo": "spryker-docs",
+    "laravel": false,
+    "php": false,
+    "composer": false,
+    "php_version": null,
+    "laravel_version": null,
+    "packages": [],
+    "frontend": [],
+    "structure": [],
+    "patterns": []
+  }
+]
