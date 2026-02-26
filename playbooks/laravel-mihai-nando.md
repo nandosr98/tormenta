@@ -41,6 +41,8 @@
   - logs de trazabilidad
 - Usar `FormRequest` cuando la validación crezca; inline si es simple.
 - Priorizar naming y estilo ya presente en ese repo sobre estilo “ideal”.
+- Usar Docker siguiendo la estructura existente de `docker-compose.yml` y las carpetas/archivos que ese compose referencia.
+- Al crear proyectos nuevos, mantener nombre de contenedor = nombre del proyecto (evita conflictos entre stacks).
 
 ## Checklist rápido al arrancar tarea
 - [ ] Identificar módulo más parecido y replicar patrón.

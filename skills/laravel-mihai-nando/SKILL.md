@@ -24,6 +24,8 @@ Implement code in existing project style. Prioritize consistency over “clean r
 - Preserve mixed ES/EN business naming used by the project.
 - Keep validation messages human and domain-specific.
 - For Stripe work, follow existing `Helpers/StripeHelper.php` + `Jobs/StripeWebhooks/*` pattern.
+- For Dockerized projects, mirror the current `docker-compose.yml` structure and the referenced docker folders/files.
+- For new projects, enforce container name = project name across compose services to avoid collisions.
 
 ## Output contract for each task
 
