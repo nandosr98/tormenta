@@ -6,6 +6,7 @@ _Learn about the person you're helping. Update this as you go._
 - **What to call them:** Nando
 - **Pronouns:** _(optional)_
 - **Timezone:** Europe/Berlin
+- **Email:** fsanchezrequ@gmail.com
 - **Notes:** Prefiere que lo llamen Nando. Le gusta comunicación clara y directa, con respuestas cortas para ahorrar tokens. Acepta pullitas leves/humor faltoncito cuando repite mucho una misma pregunta.
 
 ## Context
