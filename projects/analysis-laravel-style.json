@@ -2,7 +2,6 @@
   {
     "repo": "cvMaker",
     "laravel": true,
-    "php": false,
     "composer": true,
     "php_version": "^8.2",
     "laravel_version": "^12.0",
@@ -31,7 +30,6 @@
   {
     "repo": "dgt_report",
     "laravel": true,
-    "php": false,
     "composer": true,
     "php_version": "^8.2",
     "laravel_version": "^11.31",
@@ -71,7 +69,6 @@
   {
     "repo": "laravel-remarketing",
     "laravel": false,
-    "php": false,
     "composer": true,
     "php_version": "^8.2",
     "laravel_version": null,
@@ -88,7 +85,6 @@
   {
     "repo": "laravel-support-center",
     "laravel": false,
-    "php": false,
     "composer": true,
     "php_version": "^8.2",
     "laravel_version": null,
@@ -109,7 +105,6 @@
   {
     "repo": "notasimple",
     "laravel": true,
-    "php": false,
     "composer": true,
     "php_version": "^8.2",
     "laravel_version": "^11.31",
@@ -145,17 +140,5 @@
       "Jobs/dispatch: app/Livewire/UploadInformation.php, app/Livewire/Admin/SimpleNotes/View.php, app/Console/Commands/Remarketing.php",
       "HTTP client: app/Rules/GoogleRecaptcha.php"
     ]
-  },
-  {
-    "repo": "spryker-docs",
-    "laravel": false,
-    "php": false,
-    "composer": false,
-    "php_version": null,
-    "laravel_version": null,
-    "packages": [],
-    "frontend": [],
-    "structure": [],
-    "patterns": []
   }
 ]

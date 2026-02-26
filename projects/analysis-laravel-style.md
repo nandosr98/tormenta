@@ -48,5 +48,3 @@
   - Jobs/dispatch: app/Livewire/UploadInformation.php, app/Livewire/Admin/SimpleNotes/View.php, app/Console/Commands/Remarketing.php
   - HTTP client: app/Rules/GoogleRecaptcha.php
 
-## spryker-docs
-- Laravel: unknown/no
