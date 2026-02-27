@@ -35,6 +35,27 @@ Things like:
 
 Skills are shared. Your setup is yours. Keeping them apart means you can update skills without losing your notes, and share skills without leaking your infrastructure.
 
+## Calendar / Reminders command rules (Nando)
+
+- Decisive word `Evento` → create calendar event.
+- Decisive word `Recordatorio` → create reminder.
+- If neither is specified, ask whether Nando wants `Recordatorio`, `Evento`, or both.
+
+### Required questions before creating
+
+For `Evento`:
+1. Day/time
+2. Title
+3. Target calendar
+
+For `Recordatorio`:
+1. Reminder name
+2. When it should alert
+
+### Fixed footer
+
+- Calendar events must always include: `Creado por Tormenta`.
+
 ---
 
 Add whatever helps you do your job. This is your cheat sheet.
