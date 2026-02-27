@@ -58,6 +58,28 @@ END:VCALENDAR
     print('OK: test event created')
 
 
+def cmd_add_reminder(principal, cal_name):
+    cal = get_calendar(principal, cal_name)
+    local_tz = tz.gettz('Europe/Berlin')
+    due = datetime.now(local_tz) + timedelta(hours=1)
+    uid = f"storm-reminder-{int(due.timestamp())}@openclaw"
+    ics = f"""BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Storm//OpenClaw//ES
+BEGIN:VTODO
+UID:{uid}
+DTSTAMP:{datetime.utcnow().strftime('%Y%m%dT%H%M%SZ')}
+DUE:{due.strftime('%Y%m%dT%H%M%S')}
+SUMMARY:Recordatorio de prueba
+DESCRIPTION:Creado por Tormenta
+STATUS:NEEDS-ACTION
+END:VTODO
+END:VCALENDAR
+"""
+    cal.save_todo(ics)
+    print('OK: test reminder created')
+
+
 def main():
     base = os.path.dirname(os.path.abspath(__file__))
     load_env(os.path.join(base, '.env'))
@@ -79,8 +101,10 @@ def main():
         cmd_list(principal)
     elif cmd == 'add-test':
         cmd_add_test(principal, cal_name)
+    elif cmd == 'add-reminder-test':
+        cmd_add_reminder(principal, cal_name)
     else:
-        print('Usage: icloud-calendar.py [list|add-test]')
+        print('Usage: icloud-calendar.py [list|add-test|add-reminder-test]')
         sys.exit(2)
 
 
