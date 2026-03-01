@@ -16,6 +16,21 @@ Implement code in existing project style. Prioritize consistency over “clean r
 5. Reuse existing helpers/jobs/rules before adding new abstractions.
 6. Run minimal verification (lint/tests available + route smoke).
 
+## First-run bootstrap (Laravel repos in Mihai/Nando style)
+
+When cloning a project for the first time, do this in order:
+
+1. `docker compose up --build` (or equivalent compose file command)
+2. Enter backend container and run:
+   - `composer install`
+   - `php artisan migrate`
+
+Preferred command style for running commands inside backend container:
+- `docker exec -it <backend-container-name> <command>`
+
+Example:
+- `docker exec -it cv-maker-backend <comando_que_quieres_lanzar>`
+
 ## Mandatory style rules
 
 - Keep controllers pragmatic; do not force new architecture unless requested.
