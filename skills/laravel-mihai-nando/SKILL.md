@@ -21,12 +21,17 @@ Implement code in existing project style. Prioritize consistency over “clean r
 When cloning a project for the first time, do this in order:
 
 1. `docker compose up --build` (or equivalent compose file command)
-2. Enter backend container and run:
+2. Ensure Laravel writable paths have correct permissions in backend container:
+   - `storage`
+   - `storage/framework`
+   - `bootstrap/cache`
+3. Enter backend container and run:
    - `composer install`
    - `php artisan migrate`
-3. Build frontend assets on host:
+   - `php artisan db:seed`
+4. Build frontend assets on host:
    - `npm run build`
-4. Do not use `npm run dev` by default; only use it when Nando explicitly asks for dev mode.
+5. Do not use `npm run dev` by default; only use it when Nando explicitly asks for dev mode.
 
 Preferred command style for running commands inside backend container:
 - `docker exec -it <backend-container-name> <command>`
