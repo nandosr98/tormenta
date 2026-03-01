@@ -30,5 +30,17 @@ Ejemplo:
 - Desde iPhone: ejecutar el atajo y pegar payload.
 - Desde Tormenta: generar payload y enviártelo listo para copiar.
 
+## Modo 1-tap (recomendado)
+Puedes lanzar el atajo con un enlace `shortcuts://`.
+
+Script helper:
+```bash
+python integrations/shortcuts/generate-shortcut-url.py "Llamar a Miguel" --minutes 10 --list "Recordatorios"
+```
+
+Te devolverá:
+- `PAYLOAD` (texto plano)
+- `URL` (enlace que abre y ejecuta el atajo con ese payload)
+
 ## Nota
 Este puente evita inconsistencias de CalDAV con VTODO en Apple Reminders.
