@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import os
 import sys
+import uuid
 from datetime import datetime, timedelta
 from dateutil import tz
 import caldav
@@ -58,26 +59,35 @@ END:VCALENDAR
     print('OK: test event created')
 
 
-def cmd_add_reminder(principal, cal_name):
+def cmd_add_reminder(principal, cal_name, title='Recordatorio de prueba', minutes=60):
     cal = get_calendar(principal, cal_name)
     local_tz = tz.gettz('Europe/Berlin')
-    due = datetime.now(local_tz) + timedelta(hours=1)
-    uid = f"storm-reminder-{int(due.timestamp())}@openclaw"
+    due = datetime.now(local_tz) + timedelta(minutes=minutes)
+    uid = f"storm-reminder-{uuid.uuid4()}@openclaw"
+    dtstamp = datetime.utcnow().strftime('%Y%m%dT%H%M%SZ')
+    due_local = due.strftime('%Y%m%dT%H%M%S')
+
+    # Apple Reminders-compatible VTODO
     ics = f"""BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Storm//OpenClaw//ES
+CALSCALE:GREGORIAN
+PRODID:-//Tormenta//Reminders//ES
 BEGIN:VTODO
 UID:{uid}
-DTSTAMP:{datetime.utcnow().strftime('%Y%m%dT%H%M%SZ')}
-DUE:{due.strftime('%Y%m%dT%H%M%S')}
-SUMMARY:Recordatorio de prueba
+DTSTAMP:{dtstamp}
+CREATED:{dtstamp}
+LAST-MODIFIED:{dtstamp}
+SUMMARY:{title}
 DESCRIPTION:Creado por Tormenta
 STATUS:NEEDS-ACTION
+DTSTART;TZID=Europe/Berlin:{due_local}
+DUE;TZID=Europe/Berlin:{due_local}
+PRIORITY:5
 END:VTODO
 END:VCALENDAR
 """
     cal.save_todo(ics)
-    print('OK: test reminder created')
+    print(f"OK: reminder created in '{getattr(cal, 'name', '?')}' for {due.strftime('%H:%M:%S')}")
 
 
 def main():
@@ -103,8 +113,14 @@ def main():
         cmd_add_test(principal, cal_name)
     elif cmd == 'add-reminder-test':
         cmd_add_reminder(principal, cal_name)
+    elif cmd == 'add-reminder':
+        # Usage: add-reminder <title> <minutes> [calendar_name]
+        title = sys.argv[2] if len(sys.argv) > 2 else 'Recordatorio'
+        minutes = int(sys.argv[3]) if len(sys.argv) > 3 else 1
+        target_cal = sys.argv[4] if len(sys.argv) > 4 else cal_name
+        cmd_add_reminder(principal, target_cal, title=title, minutes=minutes)
     else:
-        print('Usage: icloud-calendar.py [list|add-test|add-reminder-test]')
+        print('Usage: icloud-calendar.py [list|add-test|add-reminder-test|add-reminder <title> <minutes> [calendar_name]]')
         sys.exit(2)
 
 

@@ -1,0 +1,4 @@
+# Payload examples for `Tormenta - Crear Recordatorio`
+Prueba hecha por tormenta|2026-02-27T12:50:00+01:00|Recordatorios
+Llamar a Miguel|2026-02-28T09:00:00+01:00|Trabajo
+Revisar pago MVG|2026-03-01T08:00:00+01:00|Recordatorios
