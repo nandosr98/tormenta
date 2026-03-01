@@ -24,9 +24,9 @@ When cloning a project for the first time, do this in order:
 2. Enter backend container and run:
    - `composer install`
    - `php artisan migrate`
-3. Start frontend dev server:
-   - `npm run dev`
-4. If there is more than 5 minutes of inactivity, stop the frontend dev process (`npm run dev`) to avoid unnecessary resource usage.
+3. Build frontend assets on host:
+   - `npm run build`
+4. Do not use `npm run dev` by default; only use it when Nando explicitly asks for dev mode.
 
 Preferred command style for running commands inside backend container:
 - `docker exec -it <backend-container-name> <command>`
