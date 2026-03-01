@@ -47,6 +47,7 @@ For `Evento`:
 1. Day/time
 2. Title
 3. Target calendar
+4. Duration (always ask explicitly)
 
 For `Recordatorio`:
 1. Reminder name
@@ -55,6 +56,11 @@ For `Recordatorio`:
 ### Fixed footer
 
 - Calendar events must always include: `Creado por Tormenta`.
+
+## Docker vocabulary (Nando)
+
+- `levanta(r) <proyecto>` => run `docker compose up` (normally detached)
+- `tira(r) <proyecto>` => run `docker compose down`
 
 ---
 
