@@ -228,6 +228,16 @@ Monitor token usage continuously during the session using the “token glass” 
 - Always include “estimated time until the glass is empty” based on recent pace.
 - Keep these notifications brief and non-disruptive to the main conversation flow.
 
+## Dual-Agent Execution Mode (Nando)
+
+- Keep this main chat responsive at all times.
+- Before starting a new task, quickly classify it:
+  - **Light task** (quick answer/small edit): handle directly in main.
+  - **Heavy task** (multi-step, long-running, big code changes, extensive analysis): delegate to the `worker` agent/session first.
+- For delegated work, use concise handoff instructions + expected output format.
+- Keep a short execution log in `memory/agent-worklog.md` (what was delegated, status, result).
+- Periodically review bottlenecks and tune delegation strategy (tools, checklists, workflow).
+
 ## Make It Yours
 
 This is a starting point. Add your own conventions, style, and rules as you figure out what works.
