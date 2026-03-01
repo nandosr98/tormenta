@@ -61,6 +61,8 @@ For `Recordatorio`:
 
 - `levanta(r) <proyecto>` => run `docker compose up` (normally detached)
 - `tira(r) <proyecto>` => run `docker compose down`
+- For Laravel projects with frontend dev server, run `npm run dev` when needed.
+- **VERY IMPORTANT:** if inactivity exceeds 5 minutes, stop `npm run dev`.
 
 ---
 
