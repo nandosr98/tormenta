@@ -1,0 +1,273 @@
+Prompt optimizado para Clawdbot
+
+Quiero que elabores un informe estratégico y técnico detallado de al menos 10000 palabras sobre cómo diseñar e implementar un sistema de agente de IA interno que mejore la eficiencia operativa de un equipo de desarrollo de software que utiliza Jira, Microsoft Teams y GitLab.
+
+El objetivo principal es reducir la carga operativa de los Project Managers, mejorar la productividad de los desarrolladores y optimizar el seguimiento del trabajo en un entorno Scrum, delegando en un agente de IA tareas repetitivas, administrativas o de coordinación.
+
+El informe debe centrarse en cómo diseñar un agente de IA que se integre con estas herramientas para automatizar procesos y mejorar la comunicación del equipo.
+
+Contexto del entorno
+
+La empresa trabaja con las siguientes herramientas:
+
+Jira
+
+Gestión de backlog
+
+Sprint planning
+
+Seguimiento de tareas
+
+Estados de tickets
+
+GitLab
+
+Control de versiones
+
+Merge Requests
+
+CI/CD pipelines
+
+Code review
+
+Microsoft Teams
+
+Comunicación interna
+
+Coordinación entre equipos
+
+Posibilidad de crear Teams Workflows y automatizaciones
+
+El equipo tiene aproximadamente 20 personas y trabaja utilizando Scrum.
+
+Los roles principales incluyen:
+
+Project Managers / Scrum Masters
+
+Desarrolladores
+
+Posiblemente QA o perfiles técnicos adicionales
+
+Objetivos del agente de IA
+
+El sistema de IA debe ayudar a:
+
+1. Reducir tareas administrativas de los Project Managers
+
+El agente debería automatizar o facilitar tareas como:
+
+Seguimiento de tareas del sprint
+
+Recordatorios de deadlines
+
+Detección automática de tickets bloqueados
+
+Generación de resúmenes automáticos de sprint
+
+Preparación de informes de progreso
+
+Detección de cuellos de botella en el flujo de trabajo
+
+2. Permitir que los desarrolladores se centren en trabajo técnico
+
+El agente puede ayudar mediante:
+
+Recordatorios inteligentes relacionados con tickets
+
+Automatización de ciertas interacciones con Jira
+
+Generación automática de descripciones de merge requests
+
+Resúmenes automáticos de commits y cambios
+
+Recordatorios de revisiones de código pendientes
+
+3. Mejorar la comunicación del equipo
+
+El agente debería integrarse con Microsoft Teams para:
+
+Publicar resúmenes automáticos del estado del proyecto
+
+Generar reportes diarios o semanales
+
+Notificar sobre pipelines fallidos
+
+Detectar tickets bloqueados o inactivos
+
+Recordar tareas importantes relacionadas con el sprint
+
+4. Reducir fricción en procesos repetitivos
+
+Automatizando acciones como:
+
+Actualización automática del estado de tickets cuando hay actividad en GitLab
+
+Recordatorios de tareas olvidadas
+
+Detección de tickets demasiado tiempo en un estado
+
+Seguimiento automático del progreso del sprint
+
+Aspectos que debe cubrir el informe
+
+El informe debe incluir las siguientes secciones:
+
+1. Visión general del sistema
+
+Explica:
+
+Qué papel tendrá el agente de IA dentro de la empresa
+
+Qué problemas resuelve
+
+Qué impacto puede tener en la productividad del equipo
+
+Qué tareas deben seguir siendo humanas
+
+2. Casos de uso concretos
+
+Describe ejemplos reales y detallados como:
+
+IA que analiza Jira y detecta tickets bloqueados o estancados
+
+IA que genera reportes automáticos antes de las dailies
+
+IA que resume merge requests de GitLab
+
+IA que publica resúmenes de actividad en Microsoft Teams
+
+IA que recuerda a los desarrolladores actualizar estados de tickets
+
+IA que detecta pipelines fallidos y notifica automáticamente
+
+Incluye ejemplos realistas aplicables a un equipo Scrum de 20 personas.
+
+3. Arquitectura técnica
+
+Explica cómo podría implementarse técnicamente el sistema.
+
+Incluye:
+
+Integración con APIs de:
+
+Jira
+
+GitLab
+
+Microsoft Teams
+
+Uso de:
+
+Webhooks
+
+Jobs automatizados
+
+Eventos de sistema
+
+Posible arquitectura del sistema:
+
+Servicio backend
+
+Workers
+
+Procesamiento de eventos
+
+Cómo interactuaría el agente de IA con los datos del proyecto.
+
+4. Diseño del agente de IA
+
+Describe:
+
+Qué capacidades debe tener el agente
+
+Cómo puede tomar decisiones basadas en datos
+
+Cómo estructurar prompts o herramientas
+
+Cómo evitar respuestas incorrectas o spam de notificaciones
+
+5. Automatizaciones recomendadas
+
+Incluye una lista priorizada de automatizaciones con mayor impacto, por ejemplo:
+
+Automatizaciones para Jira
+
+Automatizaciones para GitLab
+
+Automatizaciones para Teams
+
+Automatizaciones cruzadas entre herramientas
+
+Explica por qué cada una aporta valor.
+
+6. Uso de Teams Workflows
+
+Explica cómo aprovechar Microsoft Teams Workflows como parte del sistema para:
+
+Automatizar notificaciones
+
+Conectar eventos de Jira o GitLab
+
+Disparar acciones automáticas
+
+7. Roadmap de implementación
+
+Describe cómo implementar este proyecto paso a paso:
+
+MVP inicial
+
+Primera integración con una herramienta
+
+Automatizaciones básicas
+
+Expansión del sistema
+
+Escalado del agente
+
+El roadmap debe ser realista para una empresa mediana.
+
+8. Riesgos y buenas prácticas
+
+Incluye consideraciones como:
+
+Seguridad de datos
+
+Control humano sobre automatizaciones
+
+Evitar exceso de notificaciones
+
+Gestión de errores
+
+Gobernanza del sistema de IA
+
+9. Métricas de éxito
+
+Explica cómo medir si el sistema realmente mejora la eficiencia del equipo.
+
+Por ejemplo:
+
+Reducción de tareas administrativas
+
+Tiempo medio de resolución de tickets
+
+Fluidez del sprint
+
+Menor tiempo en estados bloqueados
+
+Nivel de profundidad esperado
+
+El informe debe:
+
+Ser profundo, técnico y aplicable a un entorno real
+
+Incluir ejemplos concretos de automatizaciones
+
+Proponer arquitecturas plausibles
+
+Priorizar impacto real en productividad
+
+Evita respuestas genéricas o superficiales.
+
+Quiero que el resultado pueda servir como base real para iniciar un proyecto interno de automatización con IA dentro de la empresa.
+
+Tenlo listo para mañana a las 07:00
