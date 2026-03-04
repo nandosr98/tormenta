@@ -64,6 +64,11 @@ For `Recordatorio`:
 - For Laravel projects, run frontend build on host (outside containers) using `npm run build` by default.
 - Do not rely on long-running `npm run dev` unless Nando explicitly asks for dev mode.
 
+## Repo safeguards (Tormenta workspace)
+
+- Para tareas >3 pasos o de alto riesgo, usar `improvements/how-to-use-execution-contract.md`.
+- Secret scanning local: instalar hook con `bash scripts/setup-gitleaks-hook.sh`.
+
 ---
 
 Add whatever helps you do your job. This is your cheat sheet.
