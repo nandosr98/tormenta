@@ -25,6 +25,12 @@ Things like:
 
 - home-server → 192.168.1.100, user: admin
 
+### Email contacts
+
+- Nando → fsanchezrequ@gmail.com
+- Mihai Stana → mihai.stana@gmail.com
+- Carlos Iravedra → iravedra.carlos@gmail.com
+
 ### TTS
 
 - Preferred voice: "Nova" (warm, slightly British)
