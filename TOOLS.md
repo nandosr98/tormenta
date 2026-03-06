@@ -31,6 +31,10 @@ Things like:
 - Mihai Stana → mihai.stana@gmail.com
 - Carlos Iravedra → iravedra.carlos@gmail.com
 
+### Email subject rule (Nando)
+
+- Every outbound email subject must end with: `[By Tormenta]`
+
 ### TTS
 
 - Preferred voice: "Nova" (warm, slightly British)
