@@ -46,6 +46,12 @@ Things like:
   - Executive summary
 - In the email body, include a very brief status update (what was done + current project status).
 
+### Ororo code delivery workflow (IMPORTANT)
+
+- For Ororo code changes, do **not** push directly to the main branch.
+- Delivery must be via **Pull Request** explaining the changes.
+- If changes are extensive, create an additional `.md` summary file referencing the PR ID and detailing what changed.
+
 ### TTS
 
 - Preferred voice: "Nova" (warm, slightly British)
