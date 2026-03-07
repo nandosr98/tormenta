@@ -35,6 +35,10 @@ Things like:
 
 - Every outbound email subject must end with: `[By Tormenta]`
 
+### Repo update default rule (Nando)
+
+- Always update/commit/push the repository after creating or modifying project artifacts, unless Nando explicitly says otherwise.
+
 ### Ororo project communication rule
 
 - For major Ororo milestones (e.g., MVP requirements docs), email BOTH Nando and Carlos with PDF attachments of:
