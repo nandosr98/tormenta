@@ -37,10 +37,10 @@ Things like:
 
 ### Ororo project communication rule
 
-- For major Ororo milestones (e.g., MVP requirements docs), send brief status summary emails to:
-  - Nando (fsanchezrequ@gmail.com)
-  - Carlos Iravedra (iravedra.carlos@gmail.com)
-- Mention what was done and current project status.
+- For major Ororo milestones (e.g., MVP requirements docs), email BOTH Nando and Carlos with PDF attachments of:
+  - MVP document
+  - Executive summary
+- In the email body, include a very brief status update (what was done + current project status).
 
 ### TTS
 
