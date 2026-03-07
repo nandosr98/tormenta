@@ -35,6 +35,13 @@ Things like:
 
 - Every outbound email subject must end with: `[By Tormenta]`
 
+### Ororo project communication rule
+
+- For major Ororo milestones (e.g., MVP requirements docs), send brief status summary emails to:
+  - Nando (fsanchezrequ@gmail.com)
+  - Carlos Iravedra (iravedra.carlos@gmail.com)
+- Mention what was done and current project status.
+
 ### TTS
 
 - Preferred voice: "Nova" (warm, slightly British)
