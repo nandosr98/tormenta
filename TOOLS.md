@@ -50,6 +50,7 @@ Things like:
 
 - For Ororo code changes, do **not** push directly to the main branch.
 - Delivery must be via **Pull Request** explaining the changes.
+- Every Ororo PR must target `main` (no stacked PR bases) unless Nando explicitly asks otherwise.
 - If changes are extensive, create an additional `.md` summary file referencing the PR ID and detailing what changed.
 
 ### TTS
