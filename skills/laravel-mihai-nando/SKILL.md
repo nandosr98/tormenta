@@ -20,18 +20,26 @@ Implement code in existing project style. Prioritize consistency over “clean r
 
 When cloning a project for the first time, do this in order:
 
-1. `docker compose up --build` (or equivalent compose file command)
-2. Ensure Laravel writable paths have correct permissions in backend container:
+1. Bring stack up with build:
+   - `docker compose up --build -d`
+2. Ensure env file for compose exists (`.env.local` when compose expects it).
+3. Ensure Laravel writable paths have correct permissions in backend container (bind mounts override Dockerfile permissions):
    - `storage`
    - `storage/framework`
+   - `storage/framework/views`
    - `bootstrap/cache`
-3. Enter backend container and run:
+   - Recommended fix command:
+     - `docker exec -it <backend-container> sh -lc "chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache && chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache"`
+4. Enter backend container and run:
    - `composer install`
+   - `php artisan key:generate`
    - `php artisan migrate`
    - `php artisan db:seed`
-4. Build frontend assets on host:
+   - `php artisan optimize:clear`
+5. Build frontend assets on host:
+   - `npm install`
    - `npm run build`
-5. Do not use `npm run dev` by default; only use it when Nando explicitly asks for dev mode.
+6. Do not use `npm run dev` by default; only use it when Nando explicitly asks for dev mode.
 
 Preferred command style for running commands inside backend container:
 - `docker exec -it <backend-container-name> <command>`
@@ -47,7 +55,17 @@ Example:
 - Preserve mixed ES/EN business naming used by the project.
 - Keep validation messages human and domain-specific.
 - For Stripe work, follow existing `Helpers/StripeHelper.php` + `Jobs/StripeWebhooks/*` pattern.
-- For Dockerized projects, mirror the current `docker-compose.yml` structure and the referenced docker folders/files.
+- For Dockerized projects, mirror the current `docker-compose.yml` structure and referenced docker files exactly.
+- Preferred proven layout (from Ororo commit `[Feat] Docker Fixed and adapted to PHP@8.4`):
+  - `docker-compose.yml` with services:
+    - `webserver` (`container_name: <project>-webserver`) built from `docker/nginx/Dockerfile`
+    - `<project>-backend` built from `docker/<project>/Dockerfile`
+    - `<project>-db` (MySQL) using `.env.local`
+  - Nginx split configs:
+    - `docker/nginx/Dockerfile`
+    - `docker/nginx/nginx.base.conf`
+    - `docker/nginx/nginx-dev.conf` (or env-specific conf)
+  - Backend Dockerfile based on `php:8.4-fpm` with required extensions.
 - For new projects, enforce container name = project name across compose services to avoid collisions.
 
 ## Output contract for each task
