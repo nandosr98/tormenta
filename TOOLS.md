@@ -52,6 +52,11 @@ Things like:
 - Delivery must be via **Pull Request** explaining the changes.
 - Every Ororo PR must target `main` (no stacked PR bases) unless Nando explicitly asks otherwise.
 - If changes are extensive, create an additional `.md` summary file referencing the PR ID and detailing what changed.
+- Prefer Livewire for admin UI modules to improve perceived fluidity.
+- Build views ready for future i18n using translation keys like: `{{ __('page_name.component_name.label') }}`.
+- Default UI language: English.
+- Roles/permissions must be admin-configurable (dynamic RBAC), not hardcoded.
+- UI should feel corporate, smooth, and pleasant; add tasteful animations/micro-interactions where useful.
 
 ### TTS
 
