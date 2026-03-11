@@ -31,6 +31,10 @@ Things like:
 - Mihai Stana → mihai.stana@gmail.com
 - Carlos Iravedra → iravedra.carlos@gmail.com
 
+### Carlos Iravedra email policy (IMPORTANT)
+
+- Do NOT send emails to Carlos Iravedra unless Nando explicitly requests it in a direct prompt.
+
 ### Email subject rule (Nando)
 
 - Every outbound email subject must end with: `[By Tormenta]`
