@@ -42,6 +42,7 @@ Things like:
 ### Repo update default rule (Nando)
 
 - Always update/commit/push the repository after creating or modifying project artifacts, unless Nando explicitly says otherwise.
+- For every Ororo code/config change, also create or update brief documentation of what changed, why, and validation done.
 
 ### Ororo project communication rule
 
@@ -52,10 +53,12 @@ Things like:
 
 ### Ororo code delivery workflow (IMPORTANT)
 
-- For Ororo code changes, do **not** push directly to the main branch.
-- Delivery must be via **Pull Request** explaining the changes.
-- Every Ororo PR must target `main` (no stacked PR bases) unless Nando explicitly asks otherwise.
-- If changes are extensive, create an additional `.md` summary file referencing the PR ID and detailing what changed.
+- Default mode (current): direct improvements on `main` without PRs, as explicitly instructed by Nando.
+- For each Ororo coding session, always push to `main` and send Nando a concise summary of changes.
+- **Mandatory rule (effective immediately): every Ororo code/config commit must include corresponding documentation in the same commit or a paired immediate commit.**
+- Documentation must include at minimum: what changed, why, affected files/modules, and validation/tests executed.
+- If no functional code changed, document explicitly that it was a refactor/maintenance-only change.
+- If Nando later requests PR workflow again, switch back to PR-based delivery.
 - Prefer Livewire for admin UI modules to improve perceived fluidity.
 - Build views ready for future i18n using translation keys like: `{{ __('page_name.component_name.label') }}`.
 - Default UI language: English.
